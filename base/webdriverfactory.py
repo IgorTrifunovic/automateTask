@@ -18,6 +18,7 @@ class WebDriverFactory():
 
     def getWebDriverInstance(self):
         driver = webdriver.Chrome('/home/igor/chromedriver')
+        driver.implicitly_wait(3)
         baseurl = "https://www.momondo.com/"
         driver.get(baseurl)
         driver.maximize_window()
